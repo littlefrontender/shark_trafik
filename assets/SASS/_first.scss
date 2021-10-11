@@ -1,0 +1,133 @@
+.first {
+    max-width: 100%;
+    background: url('../image/bg.png') no-repeat;
+    height: 670px;
+}
+
+.first__container {
+    padding: 0 165px;
+    border: 1px solid transparent;
+}
+
+.first__header {
+    margin-top: 171px;
+
+    h1 {
+        font-size: 60px;
+        text-transform: uppercase;
+        font-weight: 900;
+        text-align: center;
+        color: #fff;
+    }
+
+    p {
+        text-align: center;
+        font-size: $fs + 4;
+        font-weight: 500;
+        color: #fff;
+    }
+}
+
+.first__stat {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 100px;
+
+    &--item {
+        border-right: 2px solid rgba(255, 255, 255, 0.25);
+        width: 276px;
+        height: 150px;
+        padding-top: 36px;
+        &:last-child {
+            border-right: none;
+        }
+        h5 {
+            color: #fff;
+            font-size: 40px;
+            font-weight: 800;
+            text-align: center;
+            line-height: 49px;
+        }
+        p {
+            font-weight: 500;
+            text-align: center;
+            color: #fff;
+        }
+    }
+}
+
+.first__footer {
+    background: url('../image/Vector\ 11.png') no-repeat;
+    width: 100%;
+    height: 300px;
+    padding: 0 165px;
+}
+
+.first__options {
+    background-color: #fff;
+    box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    display: flex;
+    width: 1110px;
+    height: 300px;
+
+    div {
+        width: 50%;
+        text-align: center;
+        padding: 58px 50px;
+        p {
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        button {
+            width: 354px;
+            height: 80px;
+            box-shadow: 0px 10px 20px rgba(78, 170, 224, 0.35);
+            border-radius: 40px;
+            text-align: center;
+            color:#fff;
+            font-weight: 900;
+            font-size: $fs + 4;
+            text-transform: uppercase;
+            border: none;
+            margin-top: 32px;
+            position: relative;
+            cursor: pointer;
+            div {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                background: url('../image/arrowWhite.svg') no-repeat center;
+            }
+        }
+    }
+
+    .first__web {
+        border-right: 2px solid #f3f3f3;
+        button {
+            background-color: $blue;
+            transition: all .2s ease-in-out;
+            &:hover {
+                background-color: #fff;
+                border: 2px solid $blue;
+                color: $blue;
+            }
+        }
+    }
+    .first__adv {
+        button {
+            background-color: $green;
+            transition: all .2s ease-in-out;
+            &:hover {
+                background-color: #fff;
+                border: 2px solid $green;
+                color: $green;
+            }
+        }    
+    }
+}

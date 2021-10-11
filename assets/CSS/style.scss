@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    max-width: 1440px;
+    font-size: 16px;
+    font-family: "Gilroy", sans-serif;
+    margin: 0;
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+$border: 1px solid #000;
+$fs: 16px;
+$green: #55B570;
+$blue: #2E9ADB;
+
+@import '../SASS/header';
+@import '../SASS/first';
+@import '../SASS/line1';
+@import '../SASS/line2';

@@ -12,6 +12,7 @@ p,
 ul {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 body {
@@ -34,3 +35,5 @@ $blue: #2E9ADB;
 @import '../SASS/first';
 @import '../SASS/line1';
 @import '../SASS/line2';
+@import '../SASS/line3';
+@import '../SASS/verticals';

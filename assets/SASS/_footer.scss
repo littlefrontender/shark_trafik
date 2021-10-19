@@ -1,0 +1,35 @@
+footer {
+    max-width: 100%;
+}
+
+.footer__container {
+    padding: 0 165px;
+}
+
+.footer__columns {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__column {
+
+    &--terms  {
+        margin: 30px 0 20px;
+
+        a    {
+            font-size: $fs - 2;
+            font-weight: 700;
+            color: $blue;
+            text-transform: uppercase;
+        }
+    }
+
+    &--privacy a {
+        font-size: $fs - 2;
+        font-weight: 700;
+        color: $blue;
+        text-transform: uppercase;
+    }
+}

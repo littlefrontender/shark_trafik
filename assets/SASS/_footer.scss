@@ -3,7 +3,7 @@ footer {
 }
 
 .footer__container {
-    padding: 0 165px;
+    padding: 0 165px 60px;
 }
 
 .footer__columns {
@@ -18,7 +18,7 @@ footer {
     &--terms  {
         margin: 30px 0 20px;
 
-        a    {
+        a {
             font-size: $fs - 2;
             font-weight: 700;
             color: $blue;
@@ -31,5 +31,57 @@ footer {
         font-weight: 700;
         color: $blue;
         text-transform: uppercase;
+    }
+
+    &--center {
+        div {
+            position: relative;
+            margin: 15px 0;
+            &::before {
+                content: "";
+                border: 2px solid $blue;
+                border-left-color: transparent;
+                border-bottom-color: transparent;
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                left: -30px;
+                top: 4px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &--right {
+
+        div {
+            position: relative;
+            margin: 15px 0;
+            &::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: -30px;
+                display: block;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .footer__email {
+            &::before {
+                background: url('../image/icons/email.png') no-repeat;
+            }
+        }
+
+        .footer__telegram {
+            &::before {
+                background: url('../image/icons/telegram.png') no-repeat;
+            }
+        }
+        .footer__skype {
+            &::before {
+                background: url('../image/icons/skype.png') no-repeat;
+            }
+        }
     }
 }

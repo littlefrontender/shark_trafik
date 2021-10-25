@@ -10,7 +10,7 @@
 }
 
 .first__header {
-    margin-top: 171px;
+    margin-top: 110px;
 
     h1 {
         font-size: 60px;
@@ -104,6 +104,9 @@
                 right: 0;
                 transform: translateY(-50%);
                 background: url('../image/arrowWhite.svg') no-repeat center;
+                &.adv__active {
+                    transform: translateY(-50%) rotate(-90deg);
+                }
             }
         }
     }

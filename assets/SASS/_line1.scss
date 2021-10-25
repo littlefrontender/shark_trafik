@@ -19,6 +19,7 @@
 .line1__features {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-top: 80px;
 
     &--item {

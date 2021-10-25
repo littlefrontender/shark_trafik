@@ -148,7 +148,7 @@ header .header__container {
 }
 
 .first__header {
-  margin-top: 171px;
+  margin-top: 110px;
 }
 
 .first__header h1 {
@@ -261,6 +261,11 @@ header .header__container {
   background: url("../image/arrowWhite.svg") no-repeat center;
 }
 
+.first__options div button div.adv__active {
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+          transform: translateY(-50%) rotate(-90deg);
+}
+
 .first__options .first__web {
   border-right: 2px solid #f3f3f3;
 }
@@ -318,6 +323,9 @@ header .header__container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 80px;
 }
 

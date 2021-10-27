@@ -28,9 +28,12 @@ header {
             margin: 0 25px;
             font-weight: 700;
             color: #565656;
-            &:focus {
-                border-top: 5px solid #2E9ADB;
-                margin-top: -5px;
+            border-top: 5px solid transparent;
+            &.green {
+                border-top: 5px solid $green;
+            }
+            &.blue {
+                border-top: 5px solid $blue;
             }
         }
 }

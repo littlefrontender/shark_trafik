@@ -1,17 +1,18 @@
+.direction__title {
+    text-align: center;
+    h2 {
+        font-size: 30px;
+        font-weight: 900;
+    }
+}
+
 .promotion {
     max-width: 100%;
 }
 
 .promotion__container {
     padding: 30px 165px;
-}
-
-.promotion__title {
-    text-align: center;
-    h2 {
-        font-size: 30px;
-        font-weight: 900;
-    }
+    padding-top: 0;
 }
 
 .promotion__block {
@@ -36,6 +37,7 @@
         p {
             text-align: center;
             color: #939393;
+            margin-bottom: 50px;
         }
     }
 }
@@ -212,24 +214,5 @@
         display: flex;
         align-items: center;
         padding: 10px 0;
-    }
-
-    &--btn {
-        border-radius: 40px;
-        border: 4px solid $blue;
-        color: $blue;
-        background: #fff;
-        width: 350px;
-        height: 80px;
-        font-weight: 900;
-        font-size: $fs + 4;
-        text-align: center;
-        margin: auto;
-        cursor: pointer;
-        transition: all .2s ease-in-out;
-        &:hover {
-            background: $blue;
-            color: #fff;
-        }
     }
 }

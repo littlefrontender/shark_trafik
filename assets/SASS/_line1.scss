@@ -39,22 +39,3 @@
         }
     }
 }
-
-.line1__signin {
-    border-radius: 40px;
-    border: 4px solid $blue;
-    color: $blue;
-    background: #fff;
-    width: 350px;
-    height: 80px;
-    font-weight: 900;
-    font-size: $fs + 4;
-    text-align: center;
-    margin: auto;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    &:hover {
-        background: $blue;
-        color: #fff;
-    }
-}

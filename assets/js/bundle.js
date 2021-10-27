@@ -13,46 +13,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ downdrop)
 /* harmony export */ });
 function downdrop() {
-    const togglePromo = document.querySelector('.promotion__divider--round a'),
-          hideBlockPromo = document.querySelector('.promotion__hide'),
-          blockPromo = document.querySelector('.promotion__block'),
-          computedBlockPromo = parseInt(getComputedStyle(blockPromo).height);
 
-    function animateClose(count, min, block, hideBlock) {
-        const int = setInterval(() => {
-            count -= 130;
-            block.style.height = count +'px';
-            console.log(count, min);
-            if (count <= min) {
-                clearInterval(int);
+    function hideBlockFunc(toggler, hide, block, heit) {
+        const togglePromo = document.querySelector(toggler),
+              hideBlockPromo = document.querySelector(hide),
+              blockPromo = document.querySelector(block),
+              computedBlockPromo = parseInt(getComputedStyle(blockPromo).height);
+
+        function animateClose(count, min, block, hideBlock) {
+            const int = setInterval(() => {
+                count -= 130;
+                block.style.height = count +'px';
+                if (count <= min) {
+                    clearInterval(int);
+                    block.style.height = min +'px';
+                    hideBlock.style.display = 'none';
+                }
+                }, 20)
+            }
+        
+        function animateOpen(count, min, block, openBlock) {
+            const int = setInterval(() => {
+                min += 130;
                 block.style.height = min +'px';
-                hideBlock.style.display = 'none';
+                if (min >= count) {
+                    clearInterval(int);
+                    block.style.height = 'auto';
+                    openBlock.style.display = 'block';
+                }
+                }, 20)
             }
-            }, 20)
-        }
-    
-    function animateOpen(count, min, block, openBlock) {
-        const int = setInterval(() => {
-            min += 130;
-            block.style.height = min +'px';
-            console.log(min, count);
-            if (min >= count) {
-                clearInterval(int);
-                block.style.height = 'auto';
-                openBlock.style.display = 'block';
+
+        function toggle(switcher) {
+            switcher.classList.toggle('closed');
+            if (switcher.classList.contains('closed')) {
+                animateClose(computedBlockPromo, heit, blockPromo, hideBlockPromo);
+            } else {
+                animateOpen(computedBlockPromo, heit, blockPromo, hideBlockPromo);
             }
-            }, 20)
         }
 
-    togglePromo.addEventListener('click', (e) => {
-        e.preventDefault();
-        togglePromo.classList.toggle('closed');
-        if (togglePromo.classList.contains('closed')) {
-            animateClose(computedBlockPromo, 280, blockPromo, hideBlockPromo);
-        } else {
-            animateOpen(computedBlockPromo, 280, blockPromo, hideBlockPromo);
-        }
-    })
+        togglePromo.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggle(togglePromo);
+        })
+    }
+    hideBlockFunc('.promotion__divider--round a', '.promotion__hide', '.promotion__block', 330);
+    hideBlockFunc('.development__divider--round a', '.development__hide', '.development__block', 330);
+    hideBlockFunc('.optimization__divider--round a', '.optimization__hide', '.optimization__block', 330);
+
 }
 
 /***/ })

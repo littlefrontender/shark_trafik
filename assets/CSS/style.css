@@ -167,9 +167,14 @@ header .header__container {
   height: 670px;
 }
 
+.first.green {
+  background: url("../image/bg-green.png") no-repeat;
+}
+
 .first__container {
   padding: 0 165px;
   border: 1px solid transparent;
+  background: url("../image/bg-2.png") no-repeat;
 }
 
 .first__header {
@@ -797,5 +802,25 @@ footer {
 
 .footer__column--right .footer__skype::before {
   background: url("../image/icons/skype.png") no-repeat;
+}
+
+.login {
+  max-width: 100%;
+  height: 800px;
+  background: url("../image/bg-1.png") no-repeat;
+  overflow: hidden;
+}
+
+.login__container {
+  max-width: 100%;
+  height: 100%;
+  background: url("../image/bg-2.png") no-repeat;
+  position: relative;
+}
+
+.login__container .login__wave {
+  position: absolute;
+  left: 0;
+  bottom: -170px;
 }
 /*# sourceMappingURL=style.css.map */

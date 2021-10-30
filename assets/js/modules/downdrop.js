@@ -44,8 +44,8 @@ export default function downdrop() {
             toggle(togglePromo);
         })
     }
-    hideBlockFunc('.promotion__divider--round a', '.promotion__hide', '.promotion__block', 330);
-    hideBlockFunc('.development__divider--round a', '.development__hide', '.development__block', 330);
-    hideBlockFunc('.optimization__divider--round a', '.optimization__hide', '.optimization__block', 330);
+    hideBlockFunc('.promotion__divider--round a', '.promotion__hide', '.promotion__block', 396);
+    hideBlockFunc('.development__divider--round a', '.development__hide', '.development__block', 396);
+    hideBlockFunc('.optimization__divider--round a', '.optimization__hide', '.optimization__block', 396);
 
 }

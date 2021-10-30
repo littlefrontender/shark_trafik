@@ -167,9 +167,14 @@ header .header__container {
   height: 670px;
 }
 
+.first.green {
+  background: url("../image/bg-green.png") no-repeat;
+}
+
 .first__container {
   padding: 0 165px;
   border: 1px solid transparent;
+  background: url("../image/bg-2.png") no-repeat;
 }
 
 .first__header {

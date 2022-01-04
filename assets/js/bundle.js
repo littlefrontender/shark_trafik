@@ -64,26 +64,6 @@ function downdrop() {
 
 }
 
-/***/ }),
-
-/***/ "./assets/js/modules/toggleHeader.js":
-/*!*******************************************!*\
-  !*** ./assets/js/modules/toggleHeader.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ toggleHeader)
-/* harmony export */ });
-function toggleHeader() {
-
-    const headerLinks = document.querySelector('.header__links');
-
-    console.log(headerLinks);
-
-}
-
 /***/ })
 
 /******/ 	});
@@ -150,12 +130,9 @@ var __webpack_exports__ = {};
   \****************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_downdrop_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/downdrop.js */ "./assets/js/modules/downdrop.js");
-/* harmony import */ var _modules_toggleHeader_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/toggleHeader.js */ "./assets/js/modules/toggleHeader.js");
-
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    (0,_modules_toggleHeader_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
     (0,_modules_downdrop_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
 });
 })();

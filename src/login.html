@@ -14,7 +14,7 @@
             <div class="header__linkBox">
                 <div class="header__links">
                     <a href="../index.html">ВЕБМАСТЕРАМ</a>
-                    <a href="src/index__adv.html">РЕКЛАМОДАТЕЛЯМ</a>
+                    <a href="index__adv.html">РЕКЛАМОДАТЕЛЯМ</a>
                 </div>
                 <div class="header__signin">
                     <a href="login.html">ВХОД</a><div>|</div><a href="signin.html">РЕГИСТРАЦИЯ</a>
@@ -29,15 +29,21 @@
 
     <section class='login'>
         <div class="login__container">
-            <h2 class="login__title">авторизоваться</h2>
-            <form action="#">
-                <input class='login__email' name='email' type="text">
-                <input class='login__pass' name='password' type="password">
-                <button class="login__submit" name='login' type="submit">
-                    войти
-                    <div></div>
-                </button>
-            </form>
+            <div class="login__box">
+                <h2 class="login__title">авторизоваться</h2>
+                <form action="#">
+                    <input class='login__email' name='email' type="text" placeholder="E-mail">
+                    <input class='login__pass' name='password' type="password" placeholder="Пароль">
+                    <button class="login__submit" name='login' type="submit">
+                        войти
+                        <div></div>
+                    </button>
+                    <div class="login__checkbox">
+                        <input class='login__checkbox--inp' type="checkbox" name='checkbox' id='checkbox' checked=''>
+                        <label for='checkbox' class="login__checkbox--lab">Запомнить меня</label>
+                    </div>
+                </form> 
+            </div> <!--/.login__box-->
             <img class='login__wave' src="../assets/image/Vector11.png" alt="">
         </div> <!--/.first__container-->
     </section> <!--/.first-->

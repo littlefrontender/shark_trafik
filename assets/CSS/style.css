@@ -816,11 +816,170 @@ footer {
   height: 100%;
   background: url("../image/bg-2.png") no-repeat;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.login__container .login__wave {
+.login__wave {
   position: absolute;
   left: 0;
   bottom: -170px;
+}
+
+.login__box {
+  margin: 0 auto;
+}
+
+.login__box form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login__box form .login__email,
+.login__box form .login__pass {
+  width: 350px;
+  height: 80px;
+  background: #fff;
+  border-radius: 40px;
+  border: none;
+  padding-left: 30px;
+  font-size: 20px;
+  margin: 15px;
+}
+
+.login__box form .login__email:focus,
+.login__box form .login__pass:focus {
+  outline: none;
+}
+
+.login__title {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.login__submit {
+  background-color: #2E9ADB;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  width: 354px;
+  height: 80px;
+  -webkit-box-shadow: 0px 10px 20px rgba(78, 170, 224, 0.35);
+          box-shadow: 0px 10px 20px rgba(78, 170, 224, 0.35);
+  border-radius: 40px;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 3px solid #fff;
+  margin-top: 32px;
+  position: relative;
+  cursor: pointer;
+}
+
+.login__submit:hover {
+  background-color: #fff;
+  border: 2px solid #2E9ADB;
+  color: #2E9ADB;
+}
+
+.login__submit div {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  right: 35.16px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url("../image/arrowWhite.svg") no-repeat center;
+}
+
+.login__submit div.adv__active {
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+          transform: translateY(-50%) rotate(-90deg);
+}
+
+.login__checkbox--lab {
+  cursor: pointer;
+}
+
+.login__checkbox--inp {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+
+.login__checkbox--inp:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+
+.login__checkbox--inp:not(checked) + .login__checkbox--lab {
+  position: relative;
+  padding: 0 0 0 60px;
+  display: block;
+  height: 30px;
+}
+
+.login__checkbox--inp:not(checked) + .login__checkbox--lab:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  border-color: #CDD1DA;
+  -webkit-box-shadow: #CDD1DA 0px 0px 0px 0px inset;
+          box-shadow: #CDD1DA 0px 0px 0px 0px inset;
+  -webkit-transition: border 0.4s, -webkit-box-shadow 0.4s;
+  transition: border 0.4s, -webkit-box-shadow 0.4s;
+  transition: border 0.4s, box-shadow 0.4s;
+  transition: border 0.4s, box-shadow 0.4s, -webkit-box-shadow 0.4s;
+  background-color: #EBECEC;
+}
+
+.login__checkbox--inp:not(checked) + .login__checkbox--lab:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #FFF;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.login__checkbox--inp:checked + .login__checkbox--lab:before {
+  -webkit-box-shadow: #4AD963 0px 0px 0px 16px inset;
+          box-shadow: #4AD963 0px 0px 0px 16px inset;
+  -webkit-transition: border 0.4s, background-color 1.2s, -webkit-box-shadow 0.4s;
+  transition: border 0.4s, background-color 1.2s, -webkit-box-shadow 0.4s;
+  transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+  transition: border 0.4s, box-shadow 0.4s, background-color 1.2s, -webkit-box-shadow 0.4s;
+  background-color: #4AD963;
+  border-color: #4AD963;
+}
+
+.login__checkbox--inp:checked + .login__checkbox--lab:after {
+  left: 26px;
 }
 /*# sourceMappingURL=style.css.map */

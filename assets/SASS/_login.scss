@@ -10,10 +10,134 @@
     height: 100%;
     background: url('../image/bg-2.png') no-repeat;
     position: relative;
+    display: flex;
+}
 
-    .login__wave {
-        position: absolute;
-        left: 0;
-        bottom: -170px;
+.login__wave {
+    position: absolute;
+    left: 0;
+    bottom: -170px;
+}
+
+.login__box {
+    margin: 0 auto;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .login__email,
+        .login__pass {
+            width: 350px;
+            height: 80px;
+            background: #fff;
+            border-radius: 40px;
+            border: none;
+            padding-left: 30px;
+            font-size: $fs + 4;
+            margin: 15px;
+
+            &:focus {
+                outline: none;
+            }
+        }
     }
 }
+
+.login__title {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.login__submit {
+    background-color: $blue;
+    transition: all .2s ease-in-out;
+    width: 354px;
+    height: 80px;
+    box-shadow: 0px 10px 20px rgba(78, 170, 224, 0.35);
+    border-radius: 40px;
+    text-align: center;
+    color:#fff;
+    font-weight: 900;
+    font-size: $fs + 4;
+    text-transform: uppercase;
+    border: 3px solid #fff;
+    margin-top: 32px;
+    position: relative;
+    cursor: pointer;
+        &:hover {
+            background-color: #fff;
+            border: 2px solid $blue;
+            color: $blue;
+        }
+        div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            right: 35.16px;
+            transform: translateY(-50%);
+            background: url('../image/arrowWhite.svg') no-repeat center;
+            &.adv__active {
+                transform: translateY(-50%) rotate(-90deg);
+            }
+        }
+}
+.login__checkbox {
+
+    &--lab {
+      cursor: pointer;
+    }
+
+    &--inp {
+        vertical-align: top;
+        margin: 0 3px 0 0;
+        width: 17px;
+        height: 17px;
+    }
+    &--inp:not(checked) { position: absolute; opacity: 0;}
+    &--inp:not(checked) + &--lab {
+        position: relative; 
+        padding: 0 0 0 60px;
+        display: block;
+        height: 30px;
+      }
+    &--inp:not(checked) + &--lab:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 50px;
+        height: 26px;
+        border-radius: 13px;
+        border-color: #CDD1DA;
+        box-shadow: #CDD1DA 0px 0px 0px 0px inset;
+        transition: border 0.4s, box-shadow 0.4s;
+        background-color: #EBECEC;
+      }
+    &--inp:not(checked) + &--lab:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 2px;
+        width: 22px;
+        height: 22px;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 0 2px 5px rgba(0,0,0,.3);
+        transition: all .2s;
+      }
+    &--inp:checked + &--lab:before {
+        box-shadow: #4AD963 0px 0px 0px 16px inset;
+        transition: border 0.4s, box-shadow 0.4s, background-color 1.2s;
+        background-color: #4AD963;
+        border-color: #4AD963;
+      }
+    &--inp:checked + &--lab:after { left: 26px;}
+}
+
